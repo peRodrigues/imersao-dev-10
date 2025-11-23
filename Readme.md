@@ -8,16 +8,6 @@ Com base nas suas preferências de Foco, Ferramenta e Nível (Básico, Intermedi
 
 É um recurso indispensável para quem busca clareza sobre "o que estudar" e "em qual ordem".
 
-## 🚀 Tecnologias Utilizadas (O Poder do Básico)
-
-Um dos pilares deste projeto é demonstrar o quão poderosa e apresentável uma aplicação pode ser, utilizando apenas os fundamentos da web.
-
-* **HTML5:** Estrutura semântica e base de dados (JSON).
-* **CSS3:** Estilização, layout responsivo (Grid/Flexbox) e aprimoramento visual.
-* **JavaScript (Puro/Vanilla JS):** Toda a lógica de filtragem, renderização dinâmica dos nós e, principalmente, o desenho interativo das conexões SVG (linhas).
-
-> **Nenhuma biblioteca ou framework foi utilizada!** Todo o projeto foi construído do zero, com foco em código limpo e eficiência.
-
 ## ✨ Características e Utilidade
 
 * **Roadmaps Dinâmicos:** Filtra o caminho de aprendizado ideal com base em 3 critérios (Foco, Ferramenta, Nível).
@@ -36,13 +26,23 @@ A IA desempenhou um papel relevante em:
 
 A IA, quando usada como uma ferramenta de **colaboração e assistência**, e não como substituta, acelera o desenvolvimento, melhora a qualidade do código e permite que o desenvolvedor se concentre em problemas de design e arquitetura mais complexos.
 
+## 🚀 Tecnologias Utilizadas (O Poder do Básico)
+
+Um dos pilares deste projeto é demonstrar o quão poderosa e apresentável uma aplicação pode ser, utilizando apenas os fundamentos da web.
+
+* **HTML5:** Estrutura semântica e base de dados (JSON).
+* **CSS3:** Estilização, layout responsivo (Grid/Flexbox) e aprimoramento visual.
+* **JavaScript (Puro/Vanilla JS):** Toda a lógica de filtragem, renderização dinâmica dos nós e, principalmente, o desenho interativo das conexões SVG (linhas).
+
+> **Nenhuma biblioteca ou framework foi utilizada!** Todo o projeto foi construído do zero, com foco em código limpo e eficiência.
+
 ## 🛠️ Como Executar Localmente
 
 Como o projeto é puramente estático, basta seguir estes passos:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [SEU_LINK_DO_REPOSITÓRIO]
+    git clone https://github.com/peRodrigues/imersao-dev-10.git
     ```
 2.  **Abra os arquivos:**
     Navegue até o diretório e abra o arquivo `index.html` diretamente no seu navegador. Não é necessário servidor local.
