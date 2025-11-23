@@ -1,0 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+/* -------------------------------------------
+ * Z. CLASSES UTILITÁRIAS (PADRONIZAÇÃO)
+ * ------------------------------------------- */
+
+/* Padroniza a largura máxima e centralização de containers */
+.u-container {
+    width: 1210px; /* Largura máxima comum */
+    max-width: 100%; /* Garante responsividade em telas menores */
+    margin-left: auto;
+    margin-right: auto;
+    /* Adicionado padding horizontal para mobile e tablet */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Padroniza o display: flex com alinhamento comum */
+.u-display-flex-col-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Padroniza o gap comum de 1.5rem (24px) */
+.u-gap-medium {
+    gap: 1.5rem; /* 24px */
+}
+
+/* Padroniza cores de texto */
+.text-light {
+    color: #E3E3E3;
+}
+.text-dark {
+    color: #191919;
+}
+
+/* Padronização BASE para os Badges/Tags */
+.badge {
+    display: block;
+    width: max-content;
+    border-radius: 12px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+}
+
+/* Modificadores de cor para os Badges */
+.badge--dark {
+    background-color: #191919;
+    color: #E3E3E3;
+}
+.badge--light {
+    background-color: #CACACA;
+    color: #191919;
+}
+
+
+/* -------------------------------------------
+ * Estrutura Básica de Classes BEM (Original)
+ * ------------------------------------------- */
+
+.header {
+    position: relative;
+    max-height: 100px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E1E1E;
+    /* PADRÃO DESKTOP */
+    padding: 0 202px;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px; /* espessura da borda */
+    background: linear-gradient(to right, #1E1E1E 0%, #E3E3E3 50%, #1E1E1E 100%);
+}
+
+
+.header__logo-container {}
+.header__logo {
+    width: 179.4px;
+    height: 34.57px;
+}
+.header__nav {}
+.header__cta {
+
+}
+
+/* Classes BUTTON (mantidas) */
+.button {
+    max-width: max-content;
+    display: inline-block;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #1E1E1E;
+    background-color: #E3E3E3;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 12px;
+    text-transform: uppercase;
+    font-weight: 500; /* Medium */
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #CACACA;
+    transition: background-color 0.3s ease;
+}
+.button--primary {}
+.button--secondary {}
+
+.main {
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem; /* 64px */
+    padding: 4.5rem 0; /* 72px */
+}
+
+/* -------------------------------------------
+ * Seção HERO
+ * ------------------------------------------- */
+.hero-section {
+    max-width: 1132px;
+}
+.hero-section__content {
+    /* REMOVIDO: width: 1210px; (usar .u-container) */
+    /* REMOVIDO: display: flex; flex-direction: column; align-items: center; (usar .u-display-flex-col-center) */
+    gap: 3rem; /* 48px */
+}
+
+.hero-section__section {
+    /* REMOVIDO: display: flex; flex-direction: column; align-items: center; (usar .u-display-flex-col-center) */
+    /* REMOVIDO: gap: 1.5rem; (usar .u-gap-medium) */
+    justify-content: center;
+}
+.hero-section__pre-heading {}
+.hero-section__heading {
+    font-family: "Space Grotesk", sans-serif;
+    /* max-width: 1132px; */
+    font-size: 6.5rem; /* 104px */
+    text-align: center;
+    font-weight: 300; /* Light */
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+    line-height: 1.0;
+}
+.hero-section__tagline {
+    font-family: "Space Grotesk", sans-serif;
+    /* max-width: 55vw; */
+    font-size: 17px;
+    width: 902px;
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+    text-align: center;
+}
+.hero-section__cta {}
+.hero-section__image-container {
+    max-width: 599px;
+    width: 100%; /* Garante que a imagem se ajuste ao container */
+}
+.hero-section__image-caption {}
+
+
+/* -------------------------------------------
+ * Seção ABOUT
+ * ------------------------------------------- */
+.about-section {
+    /* REMOVIDO: width: 1210px; (usar .u-container) */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    /* Adicionando padding horizontal para que o badge fique alinhado ao container */
+    padding: 0 1rem;
+}
+.about-section__badge {
+    /* REMOVIDO: display: block; width: max-content; border-radius: 12px; font-family: "Space Grotesk", sans-serif; font-size: 15px; text-transform: uppercase; padding: 6px 12px; (usar .badge) */
+    /* REMOVIDO: background-color: #191919; color: #E3E3E3; (usar .badge--dark) */
+    margin-bottom: 1.5rem; /* Espaço entre o badge e o container principal */
+}
+.about-section__text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 599px; /* Padrão Desktop */
+    /* REMOVIDO: display: flex; flex-direction: column; (usar .u-display-flex-col-center) */
+    /* REMOVIDO: gap: 1.5rem; (usar .u-gap-medium) */
+    gap: 1.5rem; /* Mantendo o gap para consistência */
+}
+.about-section__title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 65px;
+    text-align: left;
+    letter-spacing: -0.5px;
+    line-height: 1.0;
+    font-weight: 100; /* Light */
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+.about-section__container {
+    display: flex;
+    flex-direction: row; /* Padrão Desktop */
+    justify-content: space-between;
+    width: 100%; /* Garante que o container interno use 100% da largura do .u-container pai */
+}
+.about-section__text {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+.about-section__topic-list {}
+.about-section__topic {}
+.about-section__topic--highlight {}
+
+
+/* -------------------------------------------
+ * Seção AI FEATURE
+ * ------------------------------------------- */
+.ai-feature-section {
+    width: 950px; /* Padrão Desktop */
+    max-width: 100%; /* Garante responsividade */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* 24px */
+    padding: 32px 24px;
+    border-radius: 12px;
+    background-color: #E3E3E3;
+}
+
+.ai-feature-section--dark {}
+.ai-feature-section__badge {
+    /* REMOVIDO: display: block; width: max-content; border-radius: 12px; font-family: "Space Grotesk", sans-serif; font-size: 15px; text-transform: uppercase; padding: 6px 12px; (usar .badge) */
+    /* REMOVIDO: background-color: #CACACA; color: #191919; (usar .badge--light) */
+}
+.ai-feature-section__title {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 100; /* Light */
+    font-size: 65px;
+    max-width: 451px;
+    text-align: center;
+    letter-spacing: -0.5px;
+    line-height: 1.0;
+}
+
+.ai-feature-section__subtitle {}
+.ai-feature-section__grid {
+    max-width: 902px;
+    width: 100%; /* Adicionado para garantir 100% de largura dentro do pai */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Padrão Desktop */
+    gap: 2rem; /* 32px */
+}
+
+.ai-card {
+    max-width: 287px; /* Padrão Desktop */
+    width: 100%; /* Garante que o card use 100% da coluna de grid */
+    /* REMOVIDO: display: flex; flex-direction: column; align-items: center; justify-content: center; (usar .u-display-flex-col-center com justify-content específico se necessário) */
+    display: flex; /* Adicionado para garantir que o texto dentro se ajuste bem */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #CACACA;
+    /* REMOVIDO: color: #191919; (usar .text-dark) */
+    padding: 12px 8px; /* Espaçamento interno padrão */
+    border-radius: 8px; /* Borda arredondada para o card */
+    box-sizing: border-box; /* Garante que padding não afete a largura/altura total */
+
+}
+
+.ai-card__title {}
+.ai-card__description {
+    font-size: 15px;
+    text-align: center; /* Centralizando texto dentro do card para mobile */
+    /* REMOVIDO: color: #191919; (usar .text-dark) */
+}
+
+
+/* -------------------------------------------
+ * Seção PROCESS
+ * ------------------------------------------- */
+.process-section {
+    display: flex;
+    flex-direction: row; /* Padrão Desktop */
+    gap: 125px; /* Padrão Desktop */
+    /* REMOVIDO: width: 1210px; (usar .u-container) */
+    /* REMOVIDO: display: flex; flex-direction: column; align-items: center; (usar .u-display-flex-col-center) */
+}
+.process-section__title-content {
+    width: 516px; /* Padrão Desktop */
+    max-width: 100%; /* Garante responsividade */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 20px */
+}
+.process-section__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem; /* 12px */
+}
+.process-section__title {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 100; /* Light */
+    font-size: 65px;
+    text-align: left; /* Padrão Desktop */
+    letter-spacing: -0.5px;
+    line-height: 1.0;
+}
+.process-section__cta {}
+.process-section__list {
+    width: 521px; /* Padrão Desktop */
+    max-width: 100%; /* Garante responsividade */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* 24px */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.process-step {}
+.process-step__number {
+    color: #E3E3E3;
+}
+.process-step__title-content {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem; /* 8px */
+}
+.process-step__title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 17px;
+    font-weight: 500; /* Medium */
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+.process-step__description {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 400; /* Regular */
+}
+.process-step__details {
+    list-style: disc;
+    list-style-position: inside;
+}
+.process-step__item {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+
+
+/* -------------------------------------------
+ * FOOTER
+ * ------------------------------------------- */
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: row; /* Padrão Desktop */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    /* PADRÃO DESKTOP */
+    padding: 32px 202px;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px; /* espessura da borda */
+    background: linear-gradient(to right, #1E1E1E 0%, #E3E3E3 50%, #1E1E1E 100%);
+}
+.footer__brand-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem; /* 8px */
+}
+.footer__logo {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+    width: 179.4px;
+    height: 34.57px;
+}
+.footer__tagline {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+.footer__credit {
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+.footer__cta {}
+.footer__legal-info {
+}
+.footer__ai-note {
+    color: #949494;
+    width: 748px; /* Padrão Desktop */
+    /* REMOVIDO: color: #E3E3E3; (usar .text-light) */
+}
+
+
+/* ===========================================
+ * RESPONSIVIDADE (MEDIA QUERIES)
+ * =========================================== */
+
+/* -------------------------------------------
+ * 2. TABLET (Máximo 1024px)
+ * ------------------------------------------- */
+@media (max-width: 1024px) {
+    /* HEADER E FOOTER */
+    .header {
+        padding: 0 40px; /* Reduzindo o padding horizontal do header */
+    }
+    .footer {
+        padding: 32px 40px; /* Reduzindo o padding horizontal do footer */
+    }
+
+    /* HERO */
+    .hero-section {
+        max-width: 55vw;
+    }
+    .hero-section__heading {
+        font-size: 4.5rem; /* Diminuindo o tamanho da fonte */
+    }
+    .hero-section__tagline {
+        width: 80%; /* Ajustando a largura da tagline */
+    }
+
+    /* ABOUT */
+    .about-section {
+        display: flex;
+        flex-direction: column; /* Quebra para coluna */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+
+    .about-section__container {
+        flex-direction: column; /* Quebra para coluna */
+        justify-content: center;
+        align-items: center; /* Centraliza o conteúdo na vertical */
+    }
+    .about-section__text-content {
+        display: flex;
+        width: 100%; /* Ocupa 100% da largura do container */
+        align-items: center; /* Centraliza o texto */
+        justify-content: center;
+        margin-bottom: 2rem; /* Espaçamento entre texto e imagem */
+    }
+    .about-section__title {
+        font-size: 55px;
+        text-align: center;
+    }
+
+    /* AI FEATURE */
+    .ai-feature-section {
+        width: 90%; /* Ajusta a largura para não colar nas bordas */
+        padding: 32px 16px;
+    }
+    .ai-feature-section__title {
+        font-size: 55px;
+    }
+    .ai-feature-section__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    }
+    .ai-card {
+        max-width: 100%; /* Garante que os cards se ajustem */
+    }
+
+    /* PROCESS */
+    .process-section {
+        flex-direction: column; /* Quebra para coluna */
+        gap: 3rem; /* Reduz o gap */
+        align-items: center; /* Centraliza o conteúdo */
+    }
+    .process-section__title-content {
+        width: 100%; /* Ocupa 100% da largura do container */
+        align-items: center; /* Centraliza o conteúdo do título/cta */
+    }
+    .process-section__title {
+        font-size: 55px;
+        text-align: center;
+    }
+    .process-section__list {
+        width: 100%; /* Ocupa 100% da largura do container */
+    }
+
+    /* FOOTER */
+    .footer__ai-note {
+        width: 80%; /* Ajusta a largura da nota de IA */
+    }
+}
+
+/* -------------------------------------------
+ * 3. MOBILE (Máximo 768px - Breakpoint principal para layouts de 1 coluna)
+ * ------------------------------------------- */
+@media (max-width: 768px) {
+    /* HEADER E FOOTER */
+    .header {
+        padding: 0 1rem; /* Padding menor */
+        height: 80px; /* Altura reduzida */
+    }
+    .footer {
+        flex-direction: column; /* Quebra para coluna */
+        align-items: center;
+        text-align: center;
+        padding: 32px 1rem;
+        gap: 2rem;
+    }
+    .footer__brand-info {
+        align-items: center;
+    }
+    .footer__ai-note {
+        width: 100%;
+        text-align: center;
+        font-size: 0.8rem; /* Fonte um pouco menor */
+    }
+
+    /* HERO */
+    .hero-section {
+        max-width: 55vw;
+    }
+
+    .hero-section__heading {
+        font-size: 3rem; /* Fonte ainda menor para mobile */
+    }
+    .hero-section__tagline {
+        width: 100%;
+        font-size: 16px;
+    }
+    .hero-section__content {
+        gap: 2rem;
+    }
+
+    /* ABOUT */
+    .about-section {
+        padding: 0 1rem;
+    }
+    .about-section__badge {
+        margin-left: auto; /* Centraliza o badge no mobile */
+        margin-right: auto;
+    }
+    .about-section__title {
+        font-size: 40px;
+    }
+    .about-section__image {
+        max-width: 100%; /* Garante que a imagem não transborde */
+        height: auto;
+    }
+
+    /* AI FEATURE */
+    .ai-feature-section {
+        padding: 24px 12px;
+    }
+    .ai-feature-section__title {
+        font-size: 40px;
+        max-width: 100%;
+    }
+    .ai-feature-section__grid {
+        max-width: 75%;
+        grid-template-columns: 1fr; /* 1 coluna */
+        gap: 1rem;
+    }
+}

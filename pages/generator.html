@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compass Generator</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.svg">
+
+    <link rel="stylesheet" href="../css/generator.css">
+
+</head>
+
+<body class="body-roadmap text-light">
+    <header class="header">
+        <a href="../index.html" class="header__logo-container">
+            <img class="header__logo" src="../assets/images/logo.svg" alt="Compass">
+        </a>
+    </header>
+    <div class="roadmap-wrapper">
+        <div id="filter-section" class="filter-section u-container u-display-flex-col-center u-gap-medium">
+            <h2 class="ai-feature-section__title text-light">Encontre seu Roadmap Ideal</h2>
+            <div class="filter-group">
+                <div class="input-container">
+                    <label for="foco-select">Foco Principal:</label>
+                    <select id="foco-select" class="input--select">
+                        <option value="">Selecione o Foco</option>
+                        <option value="Programação">Programação/Lógica</option>
+                        <option value="Design">Design/Visual</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="ferramenta-select">Ferramenta/Linguagem de Preferência:</label>
+                    <select id="ferramenta-select" class="input--select" disabled>
+                        <option value="">Selecione a Ferramenta</option>
+                    </select>
+                </div>
+
+                <div class="input-container">
+                    <label for="level-select">Nível de Experiência:</label>
+                    <select id="level-select" class="input--select" disabled>
+                        <option value="">Selecione o Nível</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                    </select>
+                </div>
+
+                <button id="filter-button" class="button button--primary" disabled>Gerar Roadmap</button>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div id="roadmap-container" class="roadmap-container u-container">
+                <p id="initial-message">Selecione seu foco, ferramenta e nível para gerar seu caminho de aprendizado.
+                </p>
+                <svg id="roadmap-svg" class="roadmap-svg"></svg>
+            </div>
+
+            <aside id="sidebar" class="sidebar">
+                <h2 id="sidebar-title" class="sidebar__title">Detalhes do Tópico</h2>
+                <p><strong>Categoria:</strong> <span id="sidebar-tipo"></span></p>
+                <p><strong>Tempo Sugerido:</strong> <span id="sidebar-data-sugerida"></span></p>
+                <p><strong>Lançamento:</strong> <span id="sidebar-lancamento"></span></p>
+                <p><strong>Criador:</strong> <span id="sidebar-criador"></span></p>
+                <p><strong>Documentação:</strong> <a id="sidebar-link" href="#" target="_blank"
+                        class="sidebar__link">Acessar</a></p>
+
+                <hr class="sidebar__divider">
+
+                <h3 class="sidebar__subtitle">Descrição Completa:</h3>
+                <p id="sidebar-descricao"></p>
+            </aside>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__brand-info">
+            <img class="footer__logo text-light" src="../assets/images/logo.svg" alt="Logo Compass">
+            <p class="footer__credit text-light">Feito com carinho por peRodrigues para a Imersão da Alura</p>
+        </div>
+        <div class="footer__legal-info">
+            <p class="footer__ai-note text-light">
+                Compass é a plataforma essencial que elimina a confusão do aprendizado em programação para
+                <b>Iniciantes</b>.
+                Utilizamos a inteligência artificial <b>Gemini</b>, do Google, para criar previamente roadmaps de
+                carreira
+                completos e validados, prontos para você seguir.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
