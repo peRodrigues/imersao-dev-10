@@ -1,5 +1,5 @@
 # 🗺️ Roadmaps de Carreira Web Interativos
-
+![Compass Banner](assets/images/banner.png)
 ## 🌟 Visão Geral do Projeto
 
 Este projeto é uma ferramenta educativa interativa projetada para desmistificar o caminho de aprendizado em áreas-chave do desenvolvimento web: **Frontend**, **Backend** e **WebDesign**.
@@ -51,6 +51,4 @@ Como o projeto é puramente estático, basta seguir estes passos:
 
 Projeto desenvolvido com o objetivo de estudo e organização de conhecimento.
 
-* **Desenvolvedor(a):** [Seu Nome/GitHub]
-* **Inspiração de Design/Estrutura:** [Mencione fontes se houver, ou a colaboração com a IA]
-* **Fontes de Documentação:** MDN Web Docs, W3C, documentações oficiais de Frameworks.
+* **Desenvolvedor(a):** peRodrigues
